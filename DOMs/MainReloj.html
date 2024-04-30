@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAVASCRIPT PRÁCTICA: DOM</title>
+  <style>
+    .clock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      font-family: Arial, sans-serif;
+      color: #042550;
+    }
+    
+    .hour, .minute, .second {
+      margin: 0 0.5rem;
+    }
+
+    .elemento {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+<body>
+  <div class="clock">
+    <h1>Reloj Digital</h1>
+    <br>
+    <br>
+    <div id="hour" class="hour"></div>
+    <div id="minute" class="minute"></div>
+    <div id="second" class="second"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

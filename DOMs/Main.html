@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAVASCRIPT PRÁCTICA: DOM</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+    .elemento {
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+      }
+      
+    button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #4cc1e1;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }      
+      .mensaje-validacion {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      .mensaje-validacion.error {
+        color: red;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>7. Cambiar Color de Fondo</h1>
+    <div>
+      <label for="colorSelect">Seleccione un color:</label>
+      <select id="colorSelect">
+        <option value="yellow">Amarillo</option>
+        <option value="blue">Azul</option>
+        <option value="lightblue">Celeste</option>
+        <option value="brown">Café</option>
+        <option value="purple">Morado</option>
+        <option value="orange">Naranja</option>
+        <option value="black">Negro</option>
+        <option value="gray">Plomo</option>
+        <option value="red">Rojo</option>
+        <option value="pink">Rosado</option>
+        <option value="turquoise">Turquesa</option>
+        <option value="green">Verde</option>   
+      </select>
+      <button onclick="cambiarColor()">Cambiar Color</button>
+    </div>
+    <div id="elemento" class="elemento">
+      <p>Área para probar el color.</p>
+    </div>
+  <hr>
+  <hr>
+    <h1>8.Formulario de Contacto</h1>
+    <form id="formulario" onsubmit="return validarFormulario()">
+      <div class="form-group">
+        <label for="nombre">Nombre(s):</label>
+        <input type="text" class="form-control" id="nombre">
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellidos:</label>
+        <input type="text" class="form-control" id="apellido">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" class="form-control" id="telefono" >
+      </div>
+      <div class="form-group">
+        <label for="pais">País de Procedencia:</label>
+        <input type="text" class="form-control" id="pais">
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea class="form-control" id="mensaje" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info">Enviar</button>
+    </form>
+    <div id="mensajeValidacion" class="mensaje-validacion"></div>
+  
+<hr>
+<hr>
+  <h1>9. Lista de Elementos</h1>
+    <input type="text" id="taskInput" class="form-control mb-2" placeholder="Agregar Elemento">
+    <button class="btn btn-info btn-sm mb-2" onclick="agregarTarea()">Agregar Elemento</button>
+    <ul id="taskList" class="list-group">
+    </ul>
+    </div>
+
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

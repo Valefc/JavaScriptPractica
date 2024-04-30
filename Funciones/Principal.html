@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAVASCRIPT PRÁCTICA: FUNCIONES</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      input[type="text"] {
+        width: 300px;
+        padding: 5px;
+      }
+      
+      button {
+        padding: 5px 10px;
+        background-color: #83aedb;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>1. Suma de Números en un Array</h1>
+    <div>
+      <label for="numbers">Ingrese los números separados por comas:</label>
+      <input type="text" id="numbers">
+      <button onclick="sumar()">Sumar</button>
+    </div>
+    <div>
+      <h3>Suma:</h3>
+      <p id="resultado"></p>
+    </div>
+<hr>
+<hr>
+    <h1>2. Factorial de un Número</h1>
+        <div>
+        <label for="numero">Ingrese un número:</label>
+        <input type="number" id="numero">
+        <button onclick="calcularFactorial()">Calcular Factorial</button>
+        </div>
+        <div>
+        <h3>Factorial:</h3>
+        <p id="factorial"></p>
+        </div>
+<hr>
+<hr>
+    <h1>3. Verificar si un Número es Primo</h1>
+        <div>
+        <label for="numeros">Ingrese un número:</label>
+        <input type="number" id="numeros">
+        <button onclick="verificarPrimo()">Verificar</button>
+        </div>
+        <div>
+        <h3>Verificación:</h3>
+        <p id="resultados"></p>
+        </div>
+<hr>
+<hr> 
+    <h1>4. Conversor de Celsius a Fahrenheit</h1>
+        <div>
+        <label for="celsius">Ingrese los grados Celsius:</label>
+        <input type="number" id="celsius">
+        <button onclick="convertirgrados()">Convertir</button>
+        </div>
+        <div>
+        <h3>Grados Fahrenheit:</h3>
+        <p id="fahrenheit"></p>
+        </div>
+<hr>
+<hr>
+    <h1>5. Máximo Común Divisor</h1>
+        <div>
+        <label for="numero1">Primer número:</label>
+        <input type="number" id="numero1">
+        </div>
+        <div>
+          <label for="numero2">Segundo número:</label>
+          <input type="number" id="numero2">
+        </div>
+        <button onclick="calcularMCD()">Calcular MCD</button>
+        <div>
+          <h3>Máximo Común Divisor:</h3>
+          <p id="mcd"></p>
+        </div>
+<hr>
+<hr>
+    <h1>Encontrar el Número Mayor en un Array</h1>
+      <div>
+      <label for="numberss">Ingrese los números (separados por comas):</label>
+      <input type="text" id="numberss">
+      <button onclick="encontrarMayor()">Encontrar Mayor</button>
+      </div>
+      <div>
+      <h3>Número Mayor:</h3>
+      <p id="result"></p>
+      </div>
+
+</div>
+</div>
+</div>
+  <script src="funciones.js"></script>
+</body>
+</html>
