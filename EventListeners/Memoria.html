@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <style>
+        .card {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Juego de Memoria</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" id="card-1">
+                    <img src="images/image1.avif" alt="Image 1">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-2">
+                    <img src="images/image2.jpeg" alt="Image 2">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-3">
+                    <img src="images/image3..jpeg" alt="Image 3"> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-4">
+                    <img src="images/image3..jpeg" alt="Image 3"> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-5">
+                    <img src="images/image2.jpeg" alt="Image 2"> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-6">
+                    <img src="images/image1.avif" alt="Image 1"> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let cards = document.querySelectorAll('.card');
+        let flippedCards = [];
+        let matchedCards = [];
+
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+                flipCard(card);
+            });
+        });
+
+        function flipCard(card) {
+            card.classList.add('flipped');
+            flippedCards.push(card);
+            if (flippedCards.length === 2) {
+                checkMatch();
+            }
+        }
+
+        function checkMatch() {
+            let card1 = flippedCards[0];
+            let card2 = flippedCards[1];
+            if (card1.id === card2.id) {
+                matchedCards.push(card1);
+                matchedCards.push(card2);
+                flippedCards = [];
+            } else {
+                setTimeout(() => {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    flippedCards = [];
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

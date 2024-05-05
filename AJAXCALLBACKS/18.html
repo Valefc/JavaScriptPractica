@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carusel de Imágenes</title>
+    <style>
+        #carousel {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        #image-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        #image-container img {
+            width: 100%;
+            display: none;
+        }
+        
+        #prev-btn, #next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #prev-btn {
+            left: 10px;
+        }
+        
+        #next-btn {
+            right: 10px;
+        }
+    </style>        
+</head>
+<body>
+    <div id="carousel">
+        <div id="image-container"></div>
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="18.js"></script>
+</body>
+</html>
