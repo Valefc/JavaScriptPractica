@@ -1,0 +1,41 @@
+{
+    "tareas": [
+      {
+        "id": 1,
+        "descripcion": "Comprar leche",
+        "completada": false
+      },
+      {
+        "id": 2,
+        "descripcion": "Enviar correo electrónico",
+        "completada": true
+      },
+      {
+        "id": 3,
+        "descripcion": "Llamar al médico",
+        "completada": false
+      },
+      {
+        "id": 4,
+        "descripcion": "Comprar el almuerzo",
+        "completada": false
+      },
+      {
+        "id": 5,
+        "descripcion": "Pasear a la mascota",
+        "completada": false
+      },
+      {
+        "id": 6,
+        "descripcion": "Limpiar la terraza",
+        "completada": false
+      },
+      {
+        "id": 7,
+        "descripcion": "Comprar regalos para la fiesta",
+        "completada": false
+      }
+    ]
+    
+  }
+  

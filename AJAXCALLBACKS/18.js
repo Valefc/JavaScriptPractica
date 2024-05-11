@@ -5,11 +5,11 @@ $(document).ready(function() {
     // Función para cargar imágenes utilizando AJAX
     function loadImages() {
         $.ajax({
-            url: 'https://api.example.com/images', // Reemplaza esto con la URL de tu API de imágenes
+            url: 'https://api.example.com/images', 
             method: 'GET',
             dataType: 'json',
             success: function(response) {
-                // Lógica para obtener las URLs de las imágenes de la respuesta
+                
                 images = response.urls;
                 showImage(currentIndex); // Mostrar la primera imagen al cargar
             },

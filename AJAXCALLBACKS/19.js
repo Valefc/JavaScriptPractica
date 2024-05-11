@@ -3,11 +3,11 @@ $(document).ready(function() {
 
     function loadTasks() {
         $.ajax({
-            url: 'tasks.json', // Reemplaza 'tasks.json' con la ruta de tu archivo de tareas
+            url: 'tareas.json', // Reemplaza 'tasks.json' con la ruta de tu archivo de tareas
             method: 'GET',
             dataType: 'json',
             success: function(response) {
-                displayTasks(response);
+                displayTasks(response.tareas);
             },
             error: function(xhr, status, error) {
                 console.error('Error al cargar las tareas:', error);
@@ -17,10 +17,9 @@ $(document).ready(function() {
 
     // Función para mostrar las tareas en la página
     function displayTasks(tasks) {
-        taskList.empty(); // Limpiar la lista de tareas antes de mostrar las nuevas
-
+        taskList.empty(); 
         tasks.forEach(function(task) {
-            taskList.append('<div class="task">' + task.title + '</div>');
+            taskList.append('<div class="task">' + task.descripcion + '</div>');
         });
     }
 
@@ -29,12 +28,12 @@ $(document).ready(function() {
 
     // Manejar la presentación del formulario para agregar tareas
     $('#add-task-form').submit(function(event) {
-        event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+        event.preventDefault(); 
 
         var newTaskTitle = $('#task-input').val();
         if (newTaskTitle.trim() !== '') {
             taskList.append('<div class="task">' + newTaskTitle + '</div>');
-            $('#task-input').val(''); // Limpiar el campo de entrada después de agregar la tarea
+            $('#task-input').val(''); 
         }
     });
 });
